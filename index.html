@@ -9,5 +9,28 @@
 </head>
 <body>
   <app-root></app-root>
+  <div>
+  git reset --sort [commit] 重置当前分支的指针到指定的commit，不改变暂存区和工作区的改动
+git reset --hard [commit] 重置当前分支的指针到指定的commit，同时重置工作区和暂存区的文件，与指定的提交保持一致
+
+git stash 将未提交的更改变化移除（工作区和暂存区）
+
+git cherry-pick [commit1] [commit2]将指定的其他分支的提交提交到当前分支
+-n 只更新工作区和暂存区，不产生新的提交
+--continue 解决冲突后，git add至暂存区，然后git cherry-pick --continue
+
+git branch --track [branch] [remote-branch] 新建一个分支，并与指定的远程分支建立追踪关系
+git branch -v 查看本地分支 -vv 产看本地分支及对应的远程分支的关系
+git branch --set-upstream-to/-u [branch] [remote-branch] 将当前分支与指定的远程分支建立追踪关系
+git branch -d [branch] 删除本地分支 -D 强制删除
+
+git revert [commit] 撤销指定的版本，撤销也会作为一次提交进行保存
+
+git checkout [branch] 切换到指定分支
+-b 新建分支并切换到该分支
+
+
+git merge -n [other-branch]
+  </div>
 <script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
 </html>
